@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nabiloobiloo.github.io/lapidollies/sitemap.xml
