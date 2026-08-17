@@ -4,7 +4,8 @@ A single-page, static portfolio site for **Lapidollies**, the soft-luxury kawaii
 collectible gemstone IP. Built to be opened by a licensing partner (POP MART and
 others) from a plain public link — no login, no build step, no dependencies.
 
-- **Live site:** https://nabiloobiloo.github.io/lapidollies/ *(after the one-time publish below)*
+- **Live site:** https://nabiloobiloo.github.io/lapidollies/
+- **Repository:** https://github.com/Nabiloobiloo/lapidollies (public)
 - **Content:** Part I of the Lapidollies Brand Presentation — proposition, brand
   idea and promise, brand architecture, licensing rationale, Series 01 lineup,
   the eight character profiles, the character design system, brand design codes,
@@ -16,29 +17,16 @@ others) from a plain public link — no login, no build step, no dependencies.
 
 ---
 
-## Publish it (one time, ~2 minutes)
+## Publish it (one setting, once)
 
 The site is plain HTML/CSS/JS with relative paths, so it works from any static
-host and from any sub-path.
+host and from any sub-path. The public repository already exists and the site is
+already pushed to `main`. All that is left is turning on GitHub Pages:
 
-### GitHub Pages
+**Settings → Pages → Build and deployment**
+→ Source: **Deploy from a branch** → Branch: **main** → Folder: **/ (root)** → **Save**
 
-1. Create a new **public** repository named `lapidollies` at
-   <https://github.com/new> — no README, no .gitignore, no license.
-2. From this folder, push its contents to that repository:
-
-   ```bash
-   cd lapidollies
-   git init -b main
-   git add .
-   git commit -m "Lapidollies public brand portfolio"
-   git remote add origin https://github.com/Nabiloobiloo/lapidollies.git
-   git push -u origin main
-   ```
-
-3. In the new repository: **Settings → Pages → Build and deployment**
-   → Source: **Deploy from a branch** → Branch: **main** → Folder: **/ (root)** → **Save**.
-4. Wait ~1 minute, then open <https://nabiloobiloo.github.io/lapidollies/>.
+Wait ~1 minute, then open <https://nabiloobiloo.github.io/lapidollies/>.
 
 > The repository must stay **public** for the Pages URL to be reachable without a
 > GitHub login. Pages on a private repository is a paid feature and still asks
