@@ -1,4 +1,12 @@
+# Lapidollies — private by link.
+#
+# Crawling is deliberately allowed so that crawlers can read the
+# `noindex` robots meta tag in index.html and drop the page from their index.
+# Blocking with `Disallow: /` would be worse: a blocked URL can still be listed
+# in search results (without content) if someone links to it, because the
+# crawler never gets to see the noindex instruction.
+#
+# The page stays fully accessible to anyone who has the link.
+
 User-agent: *
 Allow: /
-
-Sitemap: https://nabiloobiloo.github.io/lapidollies/sitemap.xml

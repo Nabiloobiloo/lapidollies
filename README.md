@@ -32,6 +32,28 @@ Wait ~1 minute, then open <https://nabiloobiloo.github.io/lapidollies/>.
 > GitHub login. Pages on a private repository is a paid feature and still asks
 > reviewers to sign in.
 
+### Private by link
+
+The site is reachable by anyone holding the URL, but it is kept **out of search
+engines** on purpose:
+
+```html
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+```
+
+`robots.txt` deliberately still says `Allow: /`. That looks backwards but is the
+correct pairing: a crawler must be able to fetch the page to read the `noindex`
+tag and drop it. A `Disallow: /` would block the fetch, and a blocked URL can
+still be listed in search results — without content — if anyone links to it.
+There is no `sitemap.xml` for the same reason: a sitemap invites indexing.
+
+To make the site publicly searchable later, delete that one `<meta name="robots">`
+line. Note that the **GitHub repository page** itself can still be indexed by
+search engines — that is under GitHub's control, not this repository's. If the
+brand needs to stay entirely out of search results, host the site on Netlify or
+Cloudflare Pages from a *private* repository instead: the site stays public, the
+source stops being visible.
+
 ### Verify it before sending the link
 
 - Open the URL in a **private/incognito window** while logged out of GitHub.
@@ -121,7 +143,7 @@ assets/img/og.jpg             link-preview image (1200×630)
 assets/img/favicon.svg        gem favicon
 tools/optimize-art.py         converts new source art into the site's WebP sizes
 .nojekyll                     tells GitHub Pages to serve the files as-is
-robots.txt                    allows indexing and points at the site
+robots.txt                    allows crawling on purpose — see "Private by link" below
 ```
 
 No framework, no bundler, no external requests at runtime — fonts and images are
