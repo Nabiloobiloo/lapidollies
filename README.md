@@ -6,14 +6,19 @@ others) from a plain public link — no login, no build step, no dependencies.
 
 - **Live site:** https://nabiloobiloo.github.io/lapidollies/
 - **Repository:** https://github.com/Nabiloobiloo/lapidollies (public)
-- **Content:** Part I of the Lapidollies Brand Presentation — proposition, brand
-  idea and promise, brand architecture, licensing rationale, Series 01 lineup,
-  the eight character profiles, the character design system, brand design codes,
-  the product ecosystem, the Super Rare Secret and the partnership opportunity.
-- **Assets:** seven Series 01 character artworks and five brand-deck pages, taken
-  from the supplied `LAPIDOLLIES_POPMART_SITE_PACKAGE` folder. Nothing on the site
-  is invented: every headline, profile, trait and collector-card line comes from
-  the brand presentation copy.
+- **Reading order:** Universe → Characters → Series 01 → Super Rare Secret →
+  Creative Process → Collectible Vision → Design System → Architecture →
+  About the Creator → Contact. The creative work comes first, the licensing case
+  after it — the order an artist submission needs, not a licensing deck's.
+- **Content:** Part I of the Lapidollies Brand Presentation (proposition, brand
+  idea and promise, architecture, licensing rationale, Series 01 lineup, the eight
+  character profiles, design system, design codes, product ecosystem, the Super
+  Rare Secret, partnership), plus the creator story and the creative process.
+- **Assets:** the brand logo lockup, seven Series 01 character artworks, five
+  brand-deck pages, the key visual, two lineup presentation pages, one character
+  sheet master and two product adaptation sheets. Nothing on the site is invented:
+  every headline, profile, trait and collector-card line comes from the brand
+  presentation copy, and every image comes from the project's own files.
 
 ---
 
@@ -122,6 +127,20 @@ and profile show a sealed prism panel instead. Drop in `ophalie.webp` and add
 `data-img="assets/img/characters/ophalie.webp"` to her `.dollie-detail` when you
 want to reveal her.
 
+### The creator story, authorship and rights notices
+
+Three passages state facts about the person and the property rather than the
+brand, so they are kept together here:
+
+| Where | What it says |
+|---|---|
+| `#about` section | Name, role, and the creator biography |
+| End of `#process` | Authorship and the AI-assisted visual development notice |
+| Footer note | Original property + the INPI e-Soleau time-stamp |
+
+Keep these accurate. The e-Soleau line in particular asserts a real filing — if
+the filing situation ever changes, change or remove that sentence.
+
 ### Contact address
 
 The address `nabiloukhai@gmail.com` appears in three places in `index.html`: the
@@ -137,8 +156,10 @@ index.html                    the whole site — copy, layout, character data
 assets/css/site.css           design system: ivory palette, gold accents, frames, components
 assets/js/site.js             character profile panels, deck-page lightbox, nav, scroll reveals
 assets/fonts/*.woff2          self-hosted Cormorant Garamond, Quicksand, Parisienne (SIL OFL)
+assets/img/brand/logo.webp    the logo lockup, with its ivory ground keyed out to transparency
 assets/img/characters/*.webp  seven Series 01 character artworks, two sizes each
 assets/img/deck/*.webp        five brand presentation pages, two sizes each
+assets/img/sheets/*.webp      key visual, lineup pages, character sheet, product sheets
 assets/img/og.jpg             link-preview image (1200×630)
 assets/img/favicon.svg        gem favicon
 tools/optimize-art.py         converts new source art into the site's WebP sizes
@@ -148,7 +169,8 @@ robots.txt                    allows crawling on purpose — see "Private by lin
 
 No framework, no bundler, no external requests at runtime — fonts and images are
 served from this repository, so the page renders identically offline and behind a
-corporate proxy. Total page weight is about 1.2 MB on first load.
+corporate proxy. First load is about 1 MB; the presentation sheets are lazy-loaded
+as you scroll, for roughly 1.9 MB once the whole page has been read through.
 
 ## Credits and rights
 
