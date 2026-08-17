@@ -16,7 +16,8 @@ others) from a plain public link — no login, no build step, no dependencies.
   Rare Secret, partnership), plus the creator story and the creative process.
 - **Assets:** the brand logo lockup, seven Series 01 character artworks, five
   brand-deck pages, the key visual, two lineup presentation pages, one character
-  sheet master and two product adaptation sheets. Nothing on the site is invented:
+  sheet master, two product adaptation sheets, the core packaging system and the
+  retail presentation. Nothing on the site is invented:
   every headline, profile, trait and collector-card line comes from the brand
   presentation copy, and every image comes from the project's own files.
 
@@ -159,7 +160,8 @@ assets/fonts/*.woff2          self-hosted Cormorant Garamond, Quicksand, Parisie
 assets/img/brand/logo.webp    the logo lockup, with its ivory ground keyed out to transparency
 assets/img/characters/*.webp  seven Series 01 character artworks, two sizes each
 assets/img/deck/*.webp        five brand presentation pages, two sizes each
-assets/img/sheets/*.webp      key visual, lineup pages, character sheet, product sheets
+assets/img/sheets/*.webp      key visual, lineup pages, character sheet, product sheets,
+                              core packaging system, retail presentation
 assets/img/og.jpg             link-preview image (1200×630)
 assets/img/favicon.svg        gem favicon
 tools/optimize-art.py         converts new source art into the site's WebP sizes
